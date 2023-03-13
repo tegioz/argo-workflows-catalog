@@ -1,0 +1,37 @@
+# Artifact Hub package metadata file
+version: 0.1.0
+name: argocd-sync-and-wait
+displayName: Argo CD sync and wait
+createdAt: 2020-09-30T00:00:00Z
+description: This task syncs (deploys) an Argo CD application and waits for it to be healthy
+category: integration-delivery
+license: Apache-2.0
+homeURL: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/argocd-sync-and-wait
+keywords:
+  - argo
+  - workflow
+  - argocd
+links:
+  - name: Source
+    url: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/argocd-sync-and-wait
+changes:
+  - kind: added
+    description: Initial release
+provider:
+  name: Argo community
+install: |-
+  ### Install using kubectl:
+
+  ```shell
+  kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/argo-workflows-catalog/master/templates/argocd-sync-and-wait/manifests.yaml
+  ```
+readme: |-
+  This task syncs (deploys) an Argo CD application and waits for it to be healthy.
+
+  To do so, it requires the address of the Argo CD server and some form of
+  authentication either a username/password or an authentication token.
+recommendations:
+  - url: https://artifacthub.io/packages/helm/argo/argo-cd
+  - url: https://artifacthub.io/packages/helm/argo/argo-workflows
+annotations:
+  argo/version: ">= 2.9.0"

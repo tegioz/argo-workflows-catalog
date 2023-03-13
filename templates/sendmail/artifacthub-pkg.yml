@@ -1,0 +1,38 @@
+# Artifact Hub package metadata file
+version: 0.1.0
+name: sendmail
+displayName: Sendmail
+createdAt: 2020-09-30T00:00:00Z
+description: This task sends a simple email to receivers via SMTP server
+category: integration-delivery
+license: Apache-2.0
+homeURL: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/sendmail
+keywords:
+  - argo
+  - workflow
+  - sendmail
+  - smtp
+  - email
+links:
+  - name: Source
+    url: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/sendmail
+changes:
+  - kind: added
+    description: Initial release
+provider:
+  name: Argo community
+containersImages:
+  - image: python:3.8-alpine
+install: |-
+  ### Install using kubectl:
+
+  ```shell
+  kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/argo-workflows-catalog/master/templates/sendmail/manifests.yaml
+  ```
+readme: |-
+  This task sends a simple email to receivers via SMTP server.
+recommendations:
+  - url: https://artifacthub.io/packages/helm/argo/argo-cd
+  - url: https://artifacthub.io/packages/helm/argo/argo-workflows
+annotations:
+  argo/version: ">= 2.9.0"

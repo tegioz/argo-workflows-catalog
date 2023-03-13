@@ -1,0 +1,37 @@
+# Artifact Hub package metadata file
+version: 0.1.0
+name: go-build
+displayName: Go build
+createdAt: 2020-09-30T00:00:00Z
+description: Checkout out from Git, build and test a Golang application
+category: integration-delivery
+license: Apache-2.0
+homeURL: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/go-build
+keywords:
+  - argo
+  - workflow
+  - golang
+  - git
+links:
+  - name: Source
+    url: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/go-build
+changes:
+  - kind: added
+    description: Initial release
+provider:
+  name: Argo community
+containersImages:
+  - image: golang:1.14
+install: |-
+  ### Install using kubectl:
+
+  ```shell
+  kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/argo-workflows-catalog/master/templates/go-build/manifests.yaml
+  ```
+readme: |-
+  Checkout out from Git, build and test a Golang application.
+recommendations:
+  - url: https://artifacthub.io/packages/helm/argo/argo-cd
+  - url: https://artifacthub.io/packages/helm/argo/argo-workflows
+annotations:
+  argo/version: ">= 2.9.0"

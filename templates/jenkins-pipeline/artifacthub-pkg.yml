@@ -1,0 +1,35 @@
+# Artifact Hub package metadata file
+version: 0.1.0
+name: jenkins-pipeline
+displayName: Jenkins pipeline
+createdAt: 2020-09-30T00:00:00Z
+description: This is a workflow template that allows you to run a Jenkinsfile pipeline in a container
+category: integration-delivery
+license: Apache-2.0
+homeURL: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/jenkins-pipeline
+keywords:
+  - argo
+  - workflow
+  - jenkins
+  - ci
+links:
+  - name: Source
+    url: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/jenkins-pipeline
+changes:
+  - kind: added
+    description: Initial release
+provider:
+  name: Argo community
+install: |-
+  ### Install using kubectl:
+
+  ```shell
+  kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/argo-workflows-catalog/master/templates/jenkins-pipeline/manifests.yaml
+  ```
+readme: |-
+  This is a workflow template that allows you to run a Jenkinsfile pipeline in a container by using the `jenkins/jenkinsfile-runner` image.
+recommendations:
+  - url: https://artifacthub.io/packages/helm/argo/argo-cd
+  - url: https://artifacthub.io/packages/helm/argo/argo-workflows
+annotations:
+  argo/version: ">= 2.9.0"

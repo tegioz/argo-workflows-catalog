@@ -1,0 +1,41 @@
+# Artifact Hub package metadata file
+version: 0.1.0
+name: pgdump-s3
+displayName: PG dump S3
+createdAt: 2021-03-18T00:00:00Z
+description: Dump/Restore a PostgreSQL database to/from S3
+category: integration-delivery
+license: Apache-2.0
+homeURL: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/pgdump-s3
+keywords:
+  - argo
+  - workflow
+  - postgresql
+  - backup
+  - restore
+links:
+  - name: Source
+    url: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/pgdump-s3
+changes:
+  - kind: added
+    description: Initial release
+provider:
+  name: Argo community
+containersImages:
+  - name: Backup
+    image: schickling/postgres-backup-s3
+  - name: Restore
+    image: schickling/postgres-restore-s3
+install: |-
+  ### Install using kubectl:
+
+  ```shell
+  kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/argo-workflows-catalog/master/templates/pgdump-s3/manifests.yaml
+  ```
+readme: |-
+  Dump/Restore a PostgreSQL database to/from S3.
+recommendations:
+  - url: https://artifacthub.io/packages/helm/argo/argo-cd
+  - url: https://artifacthub.io/packages/helm/argo/argo-workflows
+annotations:
+  argo/version: ">= 2.9.0"

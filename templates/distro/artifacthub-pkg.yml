@@ -1,0 +1,34 @@
+# Artifact Hub package metadata file
+version: 0.1.0
+name: distro
+displayName: Distro
+createdAt: 2021-01-20T00:00:00Z
+description: This workflow template contains a template to make simple test-container executed via Argo
+category: integration-delivery
+license: Apache-2.0
+homeURL: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/distro
+keywords:
+  - argo
+  - workflow
+  - distro
+links:
+  - name: Source
+    url: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/distro
+changes:
+  - kind: added
+    description: Initial release
+provider:
+  name: Argo community
+install: |-
+  ### Install using kubectl:
+
+  ```shell
+  kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/argo-workflows-catalog/master/templates/distro/manifests.yaml
+  ```
+readme: |-
+  This workflow template contains a template to make simple test-container executed via Argo.
+recommendations:
+  - url: https://artifacthub.io/packages/helm/argo/argo-cd
+  - url: https://artifacthub.io/packages/helm/argo/argo-workflows
+annotations:
+  argo/version: ">= 2.9.0"

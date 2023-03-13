@@ -1,0 +1,34 @@
+# Artifact Hub package metadata file
+version: 0.1.0
+name: terraform-basic
+displayName: Terraform basic
+createdAt: 2021-03-17T00:00:00Z
+description: This workflow runs a basic Terraform plan
+category: integration-delivery
+license: Apache-2.0
+homeURL: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/terraform-basic
+keywords:
+  - argo
+  - workflow
+  - terraform
+links:
+  - name: Source
+    url: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/terraform-basic
+changes:
+  - kind: added
+    description: Initial release
+provider:
+  name: Argo community
+install: |-
+  ### Install using kubectl:
+
+  ```shell
+  kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/argo-workflows-catalog/master/templates/terraform-basic/manifests.yaml
+  ```
+readme: |-
+  This workflow runs a basic Terraform plan
+recommendations:
+  - url: https://artifacthub.io/packages/helm/argo/argo-cd
+  - url: https://artifacthub.io/packages/helm/argo/argo-workflows
+annotations:
+  argo/version: ">= 2.9.0"

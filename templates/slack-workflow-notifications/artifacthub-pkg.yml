@@ -1,0 +1,38 @@
+# Artifact Hub package metadata file
+version: 0.1.0
+name: send-slack
+displayName: Send Slack
+createdAt: 2021-08-17T00:00:00Z
+description: A template for sending slack notifications with workflow status details when the workflow begins and completes
+category: integration-delivery
+license: Apache-2.0
+homeURL: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/slack-workflow-notifications
+keywords:
+  - argo
+  - workflow
+  - slack
+  - notifications
+links:
+  - name: Source
+    url: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/slack-workflow-notifications
+changes:
+  - kind: added
+    description: Initial release
+provider:
+  name: Argo community
+containersImages:
+  - name: Curl
+    image: curlimages/curl
+install: |-
+  ### Install using kubectl:
+
+  ```shell
+  kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/argo-workflows-catalog/master/templates/slack-workflow-notifications/manifests.yaml
+  ```
+readme: |-
+  A template for sending slack notifications with workflow status details when the workflow begins and completes.
+recommendations:
+  - url: https://artifacthub.io/packages/helm/argo/argo-cd
+  - url: https://artifacthub.io/packages/helm/argo/argo-workflows
+annotations:
+  argo/version: ">= 2.9.0"

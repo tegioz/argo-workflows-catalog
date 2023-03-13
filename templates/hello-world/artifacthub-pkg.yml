@@ -1,0 +1,36 @@
+# Artifact Hub package metadata file
+version: 0.1.0
+name: hello-world
+displayName: Hello world
+createdAt: 2020-09-30T00:00:00Z
+description: This is a basic catalog example that simply prints "hello argo!"
+category: integration-delivery
+license: Apache-2.0
+homeURL: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/hello-world
+keywords:
+  - argo
+  - workflow
+  - example
+links:
+  - name: Source
+    url: https://github.com/argoproj-labs/argo-workflows-catalog/tree/master/templates/hello-world
+changes:
+  - kind: added
+    description: Initial release
+provider:
+  name: Argo community
+containersImages:
+  - image: argoproj/argosay:v2
+install: |-
+  ### Install using kubectl:
+
+  ```shell
+  kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/argo-workflows-catalog/master/templates/hello-world/manifests.yaml
+  ```
+readme: |-
+  This is a basic catalog example that simply prints "hello argo!".
+recommendations:
+  - url: https://artifacthub.io/packages/helm/argo/argo-cd
+  - url: https://artifacthub.io/packages/helm/argo/argo-workflows
+annotations:
+  argo/version: ">= 2.9.0"
